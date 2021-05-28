@@ -1,0 +1,13 @@
+{
+  "events": {
+    "connections": {
+      "join": "%s 出现了!",
+      "leave": "%s 消失了!"
+    },
+
+    "commands": {
+      "failed-length": "无法执行目标命令，长度不够",
+      "failed-unknown": "无法执行目标命令，未知的命令: %s"
+    }
+  }
+}
