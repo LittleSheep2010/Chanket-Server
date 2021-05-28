@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.UUID;
+import java.util.regex.Pattern;
 
 @Slf4j
 @RestController
@@ -45,6 +46,15 @@ public class AccountController {
 
         // Register logic
         if(auto && entity == null) {
+
+            // If username has "Unsupported characters"
+            if(!Pattern.matches("^[a-zA-Z0-9_-]{4,16}$", username)) {
+
+                return new JSONObject()
+                        .put("status", "Warning")
+                        .put("reason", "Found unsupported characters in username").toString();
+            }
+
             AccountEntity insert = new AccountEntity();
             insert.setUuid(UUID.randomUUID().toString().replace("-", "").toUpperCase());
             insert.setPassword(AccountController.password(password));
