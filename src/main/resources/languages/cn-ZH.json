@@ -3,11 +3,15 @@
     "connections": {
       "join": "%s 出现了!",
       "leave": "%s 消失了!"
-    },
+    }
+  },
 
-    "commands": {
-      "failed-length": "无法执行目标命令，长度不够",
-      "failed-unknown": "无法执行目标命令，未知的命令: %s"
+  "commands": {
+    "failed-length": "无法执行目标命令，长度不够",
+    "failed-unknown": "无法执行目标命令，未知的命令: %s",
+
+    "message": {
+      "failed-offline": "发送失败，有接收用户是离线状态，为发送成功处于离线状态的用户: %s"
     }
   }
 }

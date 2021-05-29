@@ -3,11 +3,15 @@
     "connections": {
       "join": "%s appeared!",
       "leave": "%s disappeared!"
-    },
+    }
+  },
 
-    "commands": {
-      "failed-length": "Unable to execute the target command, the length is not enough",
-      "failed-unknown": "Unable to execute target command, unknown command: %s"
+  "commands": {
+    "failed-length": "Unable to execute the target command, the length is not enough",
+    "failed-unknown": "Unable to execute target command, unknown command: %s",
+
+    "message": {
+      "failed-offline": "Sending failed, the receiving user is offline, offline user: %s"
     }
   }
 }

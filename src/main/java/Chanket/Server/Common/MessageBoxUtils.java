@@ -6,29 +6,36 @@ import org.json.JSONObject;
 
 public class MessageBoxUtils {
 
-    public static String system(String message, String side) {
+    public static String system(String message, String side, String level) {
 
         JSONObject object = new JSONObject();
 
         object.put("display", side);
         object.put("message", message);
+        object.put("level", level);
         object.put("type", "system");
 
         return object.toString();
     }
 
-    public static String user(String message, String uuid, String[] receives, String side) {
+    public static String user(String message, String uuid, String title, String side) {
 
         AccountEntity entity = (AccountEntity)ChanketEndpoint.OnlineUsers.get(uuid);
         JSONObject object = new JSONObject();
 
         if(entity == null) return null;
 
+        JSONObject sender = new JSONObject();
+        sender.put("permission", entity.getPermission());
+        sender.put("username", entity.getUsername());
+        sender.put("uuid", entity.getUuid());
+
         object.put("display", side);
         object.put("message", message);
-        object.put("sender", entity.toString());
-        object.put("receives", String.join("[|]", receives));
-        object.put("type", "user");
+        object.put("sender", sender);
+        object.put("title", title);
+        object.put("type", "chat-message");
+        object.put("time", System.currentTimeMillis() / 1000);
 
         return object.toString();
     }
