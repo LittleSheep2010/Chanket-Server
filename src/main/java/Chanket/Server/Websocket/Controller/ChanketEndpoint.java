@@ -1,6 +1,7 @@
 package Chanket.Server.Websocket.Controller;
 
 import Chanket.Server.Common.MessageBoxUtils;
+import Chanket.Server.Common.Utils.CommandArgumentsProcessor;
 import Chanket.Server.Data.Configure.LanguageConfigure;
 import Chanket.Server.Data.Entities.AccountEntity;
 import lombok.SneakyThrows;
@@ -84,7 +85,7 @@ public class ChanketEndpoint {
     public void OnMessage(String message, Session session, @PathParam("uuid") String uuid) {
 
         // Process arguments
-        String[] arguments = message.split(" ");
+        String[] arguments = CommandArgumentsProcessor.QuotedDoubleSpaces(message.split(" "));
         String res;
         String title;
 
