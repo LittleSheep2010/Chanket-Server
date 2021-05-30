@@ -11,6 +11,7 @@
     "failed-unknown": "无法执行目标命令，未知的命令: %s",
 
     "message": {
+      "global-title": "全局聊天室",
       "failed-offline": "发送失败，有接收用户是离线状态，为发送成功处于离线状态的用户: %s"
     }
   }

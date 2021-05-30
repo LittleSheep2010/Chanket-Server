@@ -11,6 +11,7 @@
     "failed-unknown": "Unable to execute target command, unknown command: %s",
 
     "message": {
+      "global-title": "Global Chatroom",
       "failed-offline": "Sending failed, the receiving user is offline, offline user: %s"
     }
   }

@@ -40,7 +40,9 @@ Then use `java -jar <file-name>` to start it!
 
 ## How To Use?
 
-**Afterwards, we will create a `client.js` file in this repository for the client demonstration**
+**Afterwards, we will create a `client.js` file in this repository for the client demonstration(Completed)**
+
+**Please goto release page download!**
 
 If you want connect server. You need authorization first.
 

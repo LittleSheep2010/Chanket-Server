@@ -105,7 +105,7 @@ public class ChanketEndpoint {
                 receives.clear();
                 for(Object entity : OnlineUsers.values().toArray()) { receives.add(((AccountEntity)entity).getUuid()); }
 
-                title = "Global chatroom";
+                title = self.language.defaultLanguage().getJSONObject("commands").getJSONObject("message").getString("global-title");
             }
 
             // Session title process
