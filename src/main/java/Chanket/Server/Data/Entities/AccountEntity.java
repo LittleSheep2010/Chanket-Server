@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-@TableName(value = "Accounts")
+@TableName("Accounts")
 public class AccountEntity {
 
     @TableId(type = IdType.AUTO)

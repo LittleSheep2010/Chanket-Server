@@ -16,7 +16,7 @@ After preparing the environment, let's create the database!
 
 1. Create a file named `database.sqlite` in the same level as the downloaded Jar file
 2. Open this database file using any SQLite tool or terminal
-3. Execute the creator SQL script
+3. Execute the creator SQL script **If you are 0.0.1+, this step will automatic execute!**
 
 The Creator SQL Script
 ```sql

@@ -10,7 +10,7 @@
     </parent>
     <groupId>org.SmartSheep.CodeCraft.studio</groupId>
     <artifactId>Chanket-Server</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.1.2</version>
     <name>Chanket</name>
     <description>Demo project for Spring Boot</description>
     <properties>
@@ -77,6 +77,11 @@
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.19.1</version>
+            </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
